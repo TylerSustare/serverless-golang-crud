@@ -14,3 +14,6 @@ deploy: clean build
 gomodgen:
 	chmod u+x gomod.sh
 	./gomod.sh
+
+local:
+	make build && node ./node_modules/.bin/serverless offline start --useDocker
